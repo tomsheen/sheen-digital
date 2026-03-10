@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sheen Digital Ltd</title>
+    <title>About — Sheen Digital Ltd</title>
+    <meta name="description" content="Sheen Digital Ltd is an independent software studio based in Leeds, UK, building mobile apps and SaaS products." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -156,112 +157,6 @@
         background: #2d2d36 !important;
       }
 
-      /* ── HERO ── */
-      .hero {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 80px 24px 60px;
-      }
-
-      .hero-eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 11px;
-        font-weight: 500;
-        letter-spacing: 0.13em;
-        text-transform: uppercase;
-        color: var(--ink-mid);
-        margin-bottom: 28px;
-      }
-
-      .eyebrow-arrow {
-        color: var(--ink-muted);
-      }
-
-      .hero h1 {
-        font-family: "Instrument Serif", serif;
-        font-weight: 400;
-        font-size: clamp(52px, 8.5vw, 100px);
-        line-height: 1;
-        letter-spacing: -0.02em;
-        color: var(--ink);
-        max-width: 780px;
-        margin-bottom: 28px;
-      }
-
-      .hero-sub {
-        font-size: 17px;
-        font-weight: 300;
-        color: var(--ink-mid);
-        max-width: 500px;
-        line-height: 1.72;
-        margin-bottom: 14px;
-      }
-
-      .hero-tag {
-        font-size: 11px;
-        font-weight: 500;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: var(--ink-muted);
-        margin-bottom: 44px;
-      }
-
-      .hero-actions {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .btn-primary {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        font-family: "Geist", sans-serif;
-        font-size: 14px;
-        font-weight: 500;
-        color: white;
-        background: var(--ink);
-        padding: 13px 22px;
-        border-radius: 10px;
-        text-decoration: none;
-        transition: background 0.2s;
-      }
-
-      .btn-primary:hover {
-        background: #2d2d36;
-      }
-
-      .btn-ghost {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        font-size: 14px;
-        font-weight: 400;
-        color: var(--ink-mid);
-        text-decoration: none;
-        transition: color 0.2s;
-      }
-
-      .btn-ghost::after {
-        content: "→";
-        transition: transform 0.2s;
-      }
-
-      .btn-ghost:hover {
-        color: var(--ink);
-      }
-      .btn-ghost:hover::after {
-        transform: translateX(3px);
-      }
-
       /* ── SHARED ── */
       .section-wrap {
         max-width: 1100px;
@@ -278,16 +173,43 @@
         margin-bottom: 48px;
       }
 
-      /* ── SERVICES BAND ── */
-      .about-band {
-        background: rgba(255, 255, 255, 0.45);
+      .divider {
+        border: none;
         border-top: 1px solid var(--line);
-        border-bottom: 1px solid var(--line);
-        backdrop-filter: blur(10px);
+        max-width: 1100px;
+        margin: 0 auto;
       }
 
-      /* ── SERVICES ── */
-      .services-grid {
+      /* ── TWO-COL LAYOUT ── */
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: start;
+      }
+
+      .two-col h2 {
+        font-family: "Instrument Serif", serif;
+        font-weight: 400;
+        font-size: clamp(28px, 3.2vw, 42px);
+        line-height: 1.15;
+        color: var(--ink);
+      }
+
+      .two-col .body-text p {
+        font-size: 15px;
+        font-weight: 300;
+        color: var(--ink-mid);
+        line-height: 1.85;
+        margin-bottom: 18px;
+      }
+
+      .two-col .body-text p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── FACT CARDS ── */
+      .facts-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1px;
@@ -295,38 +217,145 @@
         border: 1px solid rgba(0, 0, 0, 0.07);
         border-radius: 12px;
         overflow: hidden;
-        margin-top: 44px;
       }
 
-      .service-card {
+      .fact-card {
         background: rgba(255, 255, 255, 0.55);
-        padding: 44px 36px;
-        transition: background 0.25s;
+        padding: 32px 28px;
         backdrop-filter: blur(8px);
+        transition: background 0.25s;
       }
 
-      .service-card:hover {
+      .fact-card:hover {
         background: rgba(255, 255, 255, 0.82);
       }
 
-      .service-num {
+      .fact-card .label {
         font-size: 11px;
         font-weight: 500;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
         color: var(--ink-muted);
-        margin-bottom: 28px;
+        margin-bottom: 12px;
       }
 
-      .service-card h3 {
+      .fact-card .value {
+        font-family: "Instrument Serif", serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.25;
+        color: var(--ink);
+      }
+
+      .fact-card .subvalue {
+        font-size: 13px;
+        color: var(--ink-muted);
+        margin-top: 6px;
+        line-height: 1.5;
+      }
+
+      /* ── PRODUCT CARD ── */
+      .product-card {
+        background: rgba(255, 255, 255, 0.55);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 32px 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        backdrop-filter: blur(8px);
+      }
+
+      .product-card .number {
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--ink-muted);
+        letter-spacing: 0.05em;
+      }
+
+      .product-card h3 {
         font-family: "Instrument Serif", serif;
         font-weight: 400;
         font-size: 22px;
         color: var(--ink);
-        margin-bottom: 12px;
         line-height: 1.2;
       }
 
-      .service-card p {
+      .product-card p {
+        font-size: 14px;
+        font-weight: 300;
+        color: var(--ink-mid);
+        line-height: 1.75;
+        flex: 1;
+      }
+
+      .card-link {
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--ink-mid);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .card-link:hover {
+        color: var(--ink);
+      }
+
+      .product-card .badge {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--ink-muted);
+        border: 1px solid var(--line);
+        border-radius: 100px;
+        padding: 4px 12px;
+        align-self: flex-start;
+      }
+
+      /* ── TEAM ── */
+      .team-block {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: start;
+      }
+
+      .team-block h2 {
+        font-family: "Instrument Serif", serif;
+        font-weight: 400;
+        font-size: clamp(28px, 3.2vw, 42px);
+        line-height: 1.15;
+        color: var(--ink);
+      }
+
+      .person-card {
+        background: rgba(255, 255, 255, 0.55);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 32px 28px;
+        backdrop-filter: blur(8px);
+      }
+
+      .person-card .name {
+        font-family: "Instrument Serif", serif;
+        font-size: 1.35rem;
+        font-weight: 400;
+        color: var(--ink);
+        margin-bottom: 4px;
+      }
+
+      .person-card .role {
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--ink-muted);
+        margin-bottom: 16px;
+      }
+
+      .person-card p {
         font-size: 14px;
         font-weight: 300;
         color: var(--ink-mid);
@@ -451,34 +480,6 @@
         color: var(--ink-muted);
       }
 
-      /* ── ANIMATIONS ── */
-      @keyframes fadeUp {
-        from {
-          opacity: 0;
-          transform: translateY(14px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .hero-eyebrow {
-        animation: fadeUp 0.55s ease both 0s;
-      }
-      .hero h1 {
-        animation: fadeUp 0.55s ease both 0.1s;
-      }
-      .hero-sub {
-        animation: fadeUp 0.55s ease both 0.2s;
-      }
-      .hero-tag {
-        animation: fadeUp 0.55s ease both 0.25s;
-      }
-      .hero-actions {
-        animation: fadeUp 0.55s ease both 0.3s;
-      }
-
       /* ── RESPONSIVE ── */
       @media (max-width: 800px) {
         nav {
@@ -488,14 +489,14 @@
           padding: 68px 24px;
         }
 
-        .about-grid {
+        .two-col,
+        .team-block {
           grid-template-columns: 1fr;
           gap: 28px;
         }
 
-        .services-grid {
+        .facts-grid {
           grid-template-columns: 1fr;
-          border-radius: 10px;
         }
 
         .contact-inner {
@@ -527,62 +528,136 @@
           <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="#contact" class="nav-cta">Get in touch</a></li>
+            <li><a href="index.html#contact" class="nav-cta">Get in touch</a></li>
           </ul>
         </div>
       </nav>
 
-      <!-- HERO -->
-      <section class="hero">
-        <p class="hero-eyebrow">
-          <span class="eyebrow-arrow">→</span>
-          Mobile Apps &amp; SaaS Products
-          <span class="eyebrow-arrow">←</span>
-        </p>
-        <h1>Software built to a high standard.</h1>
-        <p class="hero-sub">
-          Sheen Digital is an independent software studio designing and
-          developing mobile applications and web-based products for consumers
-          and businesses.
-        </p>
-        <p class="hero-tag">Leeds, United Kingdom</p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn-primary">Get in touch</a>
-          <a href="about.html" class="btn-ghost">Learn more</a>
-        </div>
-      </section>
-
-      <!-- SERVICES -->
-      <div class="about-band">
-        <div class="section-wrap">
-        <p class="section-tag">What we build</p>
-        <div class="services-grid">
-          <div class="service-card">
-            <p class="service-num">01</p>
-            <h3>Mobile Apps</h3>
+      <!-- ABOUT THE COMPANY -->
+      <div class="section-wrap" style="padding-top: 120px;">
+        <p class="section-tag">The company</p>
+        <div class="two-col">
+          <h2>Built to build things properly.</h2>
+          <div class="body-text">
             <p>
-              iOS and Android applications built with React Native. Designed for
-              performance, clarity, and long-term maintainability.
+              Sheen Digital Ltd is an independent software studio incorporated
+              in England and Wales in 2026. We design, develop, and ship mobile
+              applications and web-based software products — working across the
+              full product lifecycle from initial concept through to launch and
+              ongoing iteration.
             </p>
-          </div>
-          <div class="service-card">
-            <p class="service-num">02</p>
-            <h3>SaaS Products</h3>
             <p>
-              Web-based software products with clean interfaces, straightforward
-              pricing, and dependable infrastructure.
+              We are based in Leeds, United Kingdom. Our work is defined by
+              attention to detail, clean engineering, and a focus on building
+              products that are straightforward to use and reliable in practice.
             </p>
-          </div>
-          <div class="service-card">
-            <p class="service-num">03</p>
-            <h3>End-to-End Delivery</h3>
             <p>
-              From product definition and design to App Store submission and
-              post-launch support, we handle the full development process.
+              We work with both consumers and businesses, producing software
+              that is built to last — not thrown together. Every product we ship
+              is something we are prepared to stand behind.
             </p>
           </div>
         </div>
       </div>
+
+      <hr class="divider" />
+
+      <!-- COMPANY FACTS -->
+      <div class="section-wrap">
+        <p class="section-tag">Company details</p>
+        <div class="facts-grid">
+          <div class="fact-card">
+            <p class="label">Registered name</p>
+            <p class="value">Sheen Digital Ltd</p>
+            <p class="subvalue">Limited company, England &amp; Wales</p>
+          </div>
+          <div class="fact-card">
+            <p class="label">Company number</p>
+            <p class="value">17036653</p>
+            <p class="subvalue">Registered at Companies House</p>
+          </div>
+          <div class="fact-card">
+            <p class="label">Incorporated</p>
+            <p class="value">2026</p>
+            <p class="subvalue">England &amp; Wales</p>
+          </div>
+          <div class="fact-card">
+            <p class="label">Based in</p>
+            <p class="value">Leeds</p>
+            <p class="subvalue">United Kingdom</p>
+          </div>
+          <div class="fact-card">
+            <p class="label">Contact</p>
+            <p class="value" style="font-size: 1.1rem;">
+              <a href="mailto:hello@sheendigital.co.uk" style="color: inherit; text-decoration: none;">hello@sheendigital.co.uk</a>
+            </p>
+            <p class="subvalue">We aim to respond within one business day</p>
+          </div>
+          <div class="fact-card">
+            <p class="label">Website</p>
+            <p class="value" style="font-size: 1.1rem;">sheendigital.co.uk</p>
+            <p class="subvalue">sheendigital.co.uk</p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- OUR PRODUCTS -->
+      <div class="section-wrap">
+        <p class="section-tag">Our products</p>
+        <div class="two-col">
+          <h2>Apps we are building.</h2>
+          <div>
+            <div class="body-text">
+              <p>
+                We are currently developing our first consumer mobile
+                application, Ataraxia — a daily Stoic philosophy app for iOS
+                and Android. The app features curated quotes, daily reflection
+                prompts, streak tracking, and premium themes.
+              </p>
+              <p>
+                Ataraxia is built with React Native and Expo, targeting both
+                the Apple App Store and Google Play. Further applications and
+                products are in planning under the Sheen Digital portfolio.
+              </p>
+            </div>
+            <div class="product-card" style="margin-top: 32px;">
+              <p class="number">01</p>
+              <h3>Ataraxia</h3>
+              <p>
+                A daily Stoic philosophy app. Curated quotes, reflection
+                prompts, streak tracking, and premium themes. iOS &amp;
+                Android.
+              </p>
+              <span class="badge">Coming soon</span>
+              <a href="https://www.dailyataraxia.com" class="card-link">Visit website →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- TEAM -->
+      <div class="section-wrap">
+        <p class="section-tag">The team</p>
+        <div class="team-block">
+          <h2>Small team.<br />High standards.</h2>
+          <div>
+            <div class="person-card">
+              <p class="name">Tom Sheen</p>
+              <p class="role">Founder &amp; Director</p>
+              <p>
+                Tom is a software engineer with experience building production
+                web and mobile applications. He founded Sheen Digital Ltd to
+                build consumer and business software products to a high
+                standard, end to end. He leads all design, engineering, and
+                product decisions.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- CONTACT -->
